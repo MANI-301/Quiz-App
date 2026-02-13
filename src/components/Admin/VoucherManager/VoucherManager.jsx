@@ -1,0 +1,161 @@
+import { useState, useEffect } from "react";
+import {
+  Box, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead,
+  TableRow, Paper, Dialog, DialogTitle, DialogContent, DialogActions, TextField,
+  Switch, Select, MenuItem, FormControl, InputLabel, IconButton
+} from "@mui/material";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import EditIcon from "@mui/icons-material/Edit";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import WarningAmberIcon from "@mui/icons-material/WarningAmber";
+import { getVouchers, addVoucher, updateVoucher, deleteVoucher, getExams } from "../../../services/api.js";
+import "../../../styles/admin.css";
+
+var VoucherManager = function () {
+  var [vouchers, setVouchers] = useState([]);
+  var [exams, setExams] = useState([]);
+  var [open, setOpen] = useState(false);
+  var [deleteOpen, setDeleteOpen] = useState(false);
+  var [deleteId, setDeleteId] = useState(null);
+  var [editId, setEditId] = useState(null);
+  var [form, setForm] = useState({ code: "", examId: "", active: true });
+
+  // Async data loading
+  var load = async function () { 
+    try {
+      const v = await getVouchers();
+      const e = await getExams();
+      setVouchers(v); 
+      setExams(e);
+    } catch (error) {
+      console.error("Failed to load data", error);
+    }
+  };
+  
+  useEffect(function () { load(); }, []);
+
+  var handleOpen = function (v) {
+    if (v) { 
+      setEditId(v.id); 
+      setForm({ code: v.code, examId: v.examId, active: v.active }); 
+    } else { 
+      setEditId(null); 
+      setForm({ code: "", examId: "", active: true }); 
+    }
+    setOpen(true);
+  };
+
+  var handleSave = async function () {
+    if (!form.code || !form.examId) return;
+    
+    if (editId) {
+      await updateVoucher(editId, { 
+        code: form.code, 
+        examId: form.examId, 
+        active: form.active 
+      });
+    } else {
+      await addVoucher({ 
+        code: form.code, 
+        examId: form.examId, 
+        active: form.active 
+      });
+    }
+    setOpen(false); 
+    load();
+  };
+
+  var confirmDelete = function (id) { 
+    setDeleteId(id); 
+    setDeleteOpen(true); 
+  };
+  
+  var handleDelete = async function () { 
+    await deleteVoucher(deleteId); 
+    setDeleteOpen(false); 
+    setDeleteId(null); 
+    load(); 
+  };
+  
+  var handleToggle = async function (v) { 
+    await updateVoucher(v.id, { active: !v.active }); 
+    load(); 
+  };
+
+  return (
+    <Box>
+      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
+        <Typography variant="h5" className="management-title">Voucher Management</Typography>
+        <Button variant="contained" startIcon={<AddCircleIcon />} onClick={function () { handleOpen(); }}
+          sx={{ background: "linear-gradient(135deg, #1a6b3c, #2ecc71)", "&:hover": { background: "#27ae60" } }}>
+          Add Voucher
+        </Button>
+      </Box>
+      <TableContainer component={Paper} sx={{ borderRadius: 3, boxShadow: "0 2px 12px rgba(0,0,0,0.3)", background: "#112211" }}>
+        <Table>
+          <TableHead className="admin-table-header">
+            <TableRow>
+              <TableCell sx={{ fontWeight: 700 }}>Sr. No</TableCell>
+              <TableCell sx={{ fontWeight: 700 }}>Voucher Code</TableCell>
+              <TableCell sx={{ fontWeight: 700 }}>Exam</TableCell>
+              <TableCell sx={{ fontWeight: 700 }}>Active</TableCell>
+              <TableCell sx={{ fontWeight: 700 }}>Actions</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {vouchers.map(function (v, i) {
+              return (
+                <TableRow key={v.id} hover sx={{ "&:hover": { background: "rgba(46,204,113,0.05)" } }}>
+                  <TableCell sx={{ color: "#c0c0c0" }}>{i + 1}</TableCell>
+                  <TableCell sx={{ fontWeight: 500, color: "#e0e0e0" }}>{v.code}</TableCell>
+                  <TableCell sx={{ color: "#c0c0c0" }}>{exams.find(function (e) { return e.id === v.examId; })?.name || "N/A"}</TableCell>
+                  <TableCell>
+                    <Switch checked={v.active} onChange={function () { handleToggle(v); }}
+                      sx={{ "& .MuiSwitch-switchBase.Mui-checked": { color: "#2ecc71" },
+                        "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": { background: "#2ecc71" } }} />
+                  </TableCell>
+                  <TableCell>
+                    <IconButton sx={{ color: "#2ecc71" }} onClick={function () { handleOpen(v); }}><EditIcon /></IconButton>
+                    <IconButton sx={{ color: "#e74c3c" }} onClick={function () { confirmDelete(v.id); }}><DeleteForeverIcon /></IconButton>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
+      <Dialog open={open} onClose={function () { setOpen(false); }} maxWidth="sm" fullWidth PaperProps={{ sx: { borderRadius: 3, background: "#112211", color: "#e0e0e0" } }}>
+        <DialogTitle sx={{ fontWeight: 700, color: "#2ecc71" }}>{editId ? "Edit Voucher" : "Add Voucher"}</DialogTitle>
+        <DialogContent sx={{ pt: "16px !important" }}>
+          <TextField fullWidth label="Voucher Code" value={form.code}
+            onChange={function (e) { setForm(Object.assign({}, form, { code: e.target.value })); }} sx={{ mb: 2, "& .MuiOutlinedInput-root": { color: "#e0e0e0" }, "& .MuiInputLabel-root": { color: "#8fbc8f" }, "& .MuiOutlinedInput-notchedOutline": { borderColor: "rgba(46,204,113,0.3)" } }} />
+          <FormControl fullWidth sx={{ mb: 2 }}>
+            <InputLabel sx={{ color: "#8fbc8f" }}>Exam</InputLabel>
+            <Select value={form.examId} label="Exam" onChange={function (e) { setForm(Object.assign({}, form, { examId: e.target.value })); }}
+              sx={{ color: "#e0e0e0", "& .MuiOutlinedInput-notchedOutline": { borderColor: "rgba(46,204,113,0.3)" } }}>
+              {exams.map(function (e) { return <MenuItem key={e.id} value={e.id}>{e.name}</MenuItem>; })}
+            </Select>
+          </FormControl>
+        </DialogContent>
+        <DialogActions sx={{ p: 2 }}>
+          <Button onClick={function () { setOpen(false); }} sx={{ color: "#8fbc8f" }}>Cancel</Button>
+          <Button variant="contained" onClick={handleSave} sx={{ background: "#2ecc71" }}>Save</Button>
+        </DialogActions>
+      </Dialog>
+
+      <Dialog open={deleteOpen} onClose={function () { setDeleteOpen(false); }} PaperProps={{ sx: { borderRadius: 3, background: "#112211", color: "#e0e0e0" } }}>
+        <DialogTitle sx={{ display: "flex", alignItems: "center", gap: 1, color: "#f39c12" }}>
+          <WarningAmberIcon sx={{ color: "#f39c12" }} /> Confirm Delete
+        </DialogTitle>
+        <DialogContent><Typography sx={{ color: "#c0c0c0" }}>Are you sure you want to delete this voucher?</Typography></DialogContent>
+        <DialogActions sx={{ p: 2 }}>
+          <Button variant="contained" color="error" onClick={handleDelete}>Yes, Delete</Button>
+          <Button variant="outlined" onClick={function () { setDeleteOpen(false); }} sx={{ borderColor: "#2ecc71", color: "#2ecc71" }}>Cancel</Button>
+        </DialogActions>
+      </Dialog>
+    </Box>
+  );
+};
+
+export default VoucherManager;
