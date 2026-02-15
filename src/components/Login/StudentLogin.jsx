@@ -50,17 +50,17 @@ var StudentLogin = function () {
               <Box sx={{ display: "flex", gap: 2 }}>
                 <Button type="submit" variant="contained" fullWidth sx={{
                   py: 1.5, background: "linear-gradient(135deg, #1a6b3c, #2ecc71)", fontWeight: 600,
-                  "&:hover": { background: "linear-gradient(135deg, #2ecc71, #27ae60)" }
+                  "&:hover": { background: "linear-gradient( #002fff)" }
                 }}>Login</Button>
                 <Button variant="outlined" fullWidth onClick={function () { setEmail(""); setPassword(""); setError(""); }}
                   sx={{ py: 1.5, fontWeight: 600, borderColor: "#2ecc71", color: "#2ecc71" }}>Cancel</Button>
               </Box>
             </form>
             <Box sx={{ textAlign: "center", mt: 2 }}>
-              <Link to="/register" style={{ color: "#2ecc71", textDecoration: "none", fontWeight: 600 }}>New user register here</Link>
+              <Link to="/register" style={{ color: "#2ecc71", textDecoration: "none", fontWeight: 600}}>New register Click here?</Link>
             </Box>
-            <Box sx={{ textAlign: "center", mt: 1 }}>
-              <Link to="/admin/login" style={{ color: "#daa520", textDecoration: "none", fontSize: "0.875rem" }}>Admin Login</Link>
+            <Box sx={{ textAlign: "center", mt: 2 }}>
+              <Link to="/admin/login" style={{ color: "#ff5e00", textDecoration: "none", fontSize: "0.rem" }}>Admin Login</Link>
             </Box>
           </CardContent>
         </Card>

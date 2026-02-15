@@ -63,19 +63,21 @@ var DashboardHome = function () {
   return (
     <Box>
       <div className="dashboard-welcome">
-        <Typography variant="h4" sx={{ fontWeight: 700 }}>Welcome to Quiz App Admin</Typography>
+        <Typography variant="h4" sx={{ fontWeight: 700 }} >Welcome to Quiz App Admin</Typography>
         <Typography variant="body1">Manage exams, questions, vouchers and view student results from here.</Typography>
         <div className="admin-quick-actions" style={{ marginTop: 16 }}>
-          <button className="quick-action-btn" onClick={function () { navigate("/admin/exams"); }}>
-            <MenuBookIcon sx={{ fontSize: 18 }} /> Manage Exams
-          </button>
-          <button className="quick-action-btn" onClick={function () { navigate("/admin/questions"); }}>
+          <button className="quick-action-btn" onClick={() => navigate("/admin/exams")} style={{ color: "white" }}>
+  <MenuBookIcon sx={{ fontSize: 18, color: "white" }} />
+  Manage Exams
+</button>
+
+          <button className="quick-action-btn" onClick={function () { navigate("/admin/questions"); }} style={{ color: "white" }}>
             <QuizIcon sx={{ fontSize: 18 }} /> Manage Questions
           </button>
-          <button className="quick-action-btn" onClick={function () { navigate("/admin/vouchers"); }}>
+          <button className="quick-action-btn" onClick={function () { navigate("/admin/vouchers"); }} style={{ color: "white" }} >
             <ConfirmationNumberIcon sx={{ fontSize: 18 }} /> Manage Vouchers
           </button>
-          <button className="quick-action-btn" onClick={function () { navigate("/admin/results"); }}>
+          <button className="quick-action-btn" onClick={function () { navigate("/admin/results"); }} style={{ color: "white" }} >
             <AssessmentIcon sx={{ fontSize: 18 }} /> View Results
           </button>
         </div>

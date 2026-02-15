@@ -49,9 +49,9 @@ var AdminLogin = function () {
             {error && <Alert severity="error" sx={{ mb: 2, borderRadius: 2 }}>{error}</Alert>}
             <form onSubmit={handleLogin}>
               <TextField fullWidth label="Admin Email" value={email} onChange={function (e) { setEmail(e.target.value); }} sx={{ mb: 3 }}
-                InputProps={{ startAdornment: <InputAdornment position="start"><EmailIcon sx={{ color: "#daa520" }} /></InputAdornment> }} />
+                InputProps={{ startAdornment: <InputAdornment position="start"><EmailIcon sx={{ color: "#ff5e00" }} /></InputAdornment> }} />
               <TextField fullWidth label="Password" type="password" value={password} onChange={function (e) { setPassword(e.target.value); }} sx={{ mb: 3 }}
-                InputProps={{ startAdornment: <InputAdornment position="start"><LockIcon sx={{ color: "#daa520" }} /></InputAdornment> }} />
+                InputProps={{ startAdornment: <InputAdornment position="start"><LockIcon sx={{ color: "#ff5e00" }} /></InputAdornment> }} />
               <FormControl fullWidth sx={{ mb: 3 }}>
                 <InputLabel sx={{ color: "#8fbc8f" }}>Role</InputLabel>
                 <Select value={role} label="Role" onChange={function (e) { setRole(e.target.value); }}
@@ -61,11 +61,11 @@ var AdminLogin = function () {
               </FormControl>
               <Box sx={{ display: "flex", gap: 2 }}>
                 <Button type="submit" variant="contained" fullWidth sx={{
-                  py: 1.5, background: "linear-gradient(135deg, #b8860b, #daa520)", fontWeight: 600,
-                  "&:hover": { background: "linear-gradient(135deg, #daa520, #f0c040)" }
+                  py: 1.5, background: "linear-gradient(135deg, #ff5e00, #ff5e00)", fontWeight: 600,
+                  "&:hover": { background: "linear-gradient(135deg, #ff5e00, #ff5e00)" }
                 }}>Login</Button>
                 <Button variant="outlined" fullWidth onClick={function () { navigate("/"); }}
-                  sx={{ py: 1.5, fontWeight: 600, borderColor: "#daa520", color: "#daa520" }}>Cancel</Button>
+                  sx={{ py: 1.5, fontWeight: 600, borderColor: "#ff5e00", color: "#ff5e00" }}>Cancel</Button>
               </Box>
             </form>
             <Typography variant="body2" sx={{ textAlign: "center", mt: 2, color: "#6b8f6b" }}>Admin Panel Access</Typography>

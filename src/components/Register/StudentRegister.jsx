@@ -74,7 +74,22 @@ var StudentRegister = function () {
       <Container maxWidth="sm">
         <Card className="register-card">
           <div className="register-header">
-            <PersonAddIcon sx={{ fontSize: 48, color: "#fff", mb: 1 }} />
+            <PersonAddIcon
+  sx={{
+    fontSize: 50,
+    color: "#fff",
+    p: 1.2,
+    borderRadius: "50%",
+    background: "#047e45",
+    transition: "0.3s",
+    "&:hover": {
+      transform: "scale(1.2) rotate(10deg)",
+      boxShadow: "0 0 20px #fff",
+    },
+    mb: 1,
+  }}
+/>
+
             <Typography variant="h4" sx={{ color: "#fff", fontWeight: 700 }}>Quiz App</Typography>
             <Typography variant="subtitle1" sx={{ color: "rgba(255,255,255,0.85)" }}>Student Registration</Typography>
           </div>
@@ -84,8 +99,8 @@ var StudentRegister = function () {
             <form onSubmit={handleSubmit}>
               <TextField fullWidth label="Full Name" name="fullName" value={form.fullName} onChange={handleChange} sx={{ mb: 2 }} required />
               <TextField fullWidth label="Email ID" name="email" type="email" value={form.email} onChange={handleChange} sx={{ mb: 2 }} required />
-              <TextField fullWidth label="Contact Number" name="contact" value={form.contact} onChange={handleChange} sx={{ mb: 2 }}
-                inputProps={{ maxLength: 10 }} helperText="Enter 10-digit mobile number" />
+              <TextField fullWidth label="Contact Number" name="contact" value={form.contact} onChange={handleChange} sx={{ mb: 2 }} inputProps={{ maxLength: 10 }} helperText="Enter 10-digit mobile number" FormHelperTextProps={{ style: { color: "#ffffff" }}}/>
+
               <FormControl sx={{ mb: 2 }}>
                 <FormLabel>Gender</FormLabel>
                 <RadioGroup row name="gender" value={form.gender} onChange={handleChange}>
@@ -95,7 +110,7 @@ var StudentRegister = function () {
                 </RadioGroup>
               </FormControl>
               <TextField fullWidth label="Password" name="password" type="password" value={form.password} onChange={handleChange} sx={{ mb: 1 }} required
-                helperText="Min 6 chars: uppercase, lowercase, number, symbol" />
+                helperText="Min 6 chars: uppercase, lowercase, number, symbol" FormHelperTextProps={{ style: { color: "#ffffff" }}}/>
               <TextField fullWidth label="Confirm Password" name="confirmPassword" type="password" value={form.confirmPassword} onChange={handleChange} sx={{ mb: 3, mt: 1 }} required />
               <Box sx={{ display: "flex", gap: 2 }}>
                 <Button type="submit" variant="contained" fullWidth sx={{

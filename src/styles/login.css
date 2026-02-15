@@ -4,8 +4,9 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
-  background: linear-gradient(135deg, #0a1a0a 0%, #0d2818 40%, #1a4a2e 70%, #0d2818 100%);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
+;
 
 .login-card {
   border-radius: 20px;
@@ -19,7 +20,6 @@
   background: linear-gradient(135deg, #1a6b3c, #2ecc71);
   padding: 28px;
   text-align: center;
-  border-radius: 20px 20px 0 0;
 }
 
 .login-header h4 {
@@ -55,10 +55,10 @@
 }
 
 .admin-login-header {
-  background: linear-gradient(135deg, #b8860b, #daa520);
+  background: linear-gradient(#ff5e00);
   padding: 28px;
   text-align: center;
-  border-radius: 20px 20px 0 0;
+  border-radius: 0;
 }
 
 .admin-login-header h4 {

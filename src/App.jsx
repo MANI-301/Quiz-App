@@ -12,6 +12,8 @@ import ExamManager from "./components/Admin/ExamManager/ExamManager.jsx";
 import QuestionManager from "./components/Admin/QuestionManager/QuestionManager.jsx";
 import ResultManager from "./components/Admin/ResultManager/ResultManager.jsx";
 // import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/login.css";
+
 
 var App = function() {
   return (
