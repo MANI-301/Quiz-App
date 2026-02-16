@@ -39,7 +39,7 @@ var StudentRegister = function () {
     setError("");
     setSuccess("");
     
-    // Validation
+ 
     if (!form.fullName || !form.email || !form.password || !form.confirmPassword) {
       setError("Please fill in all required fields"); return;
     }
@@ -50,13 +50,13 @@ var StudentRegister = function () {
     if (contactError) { setError(contactError); return; }
 
     try {
-      // Async Check: Does user exist?
+     
       var users = await getUsers();
       if (users.find(function (u) { return u.email === form.email; })) {
         setError("Email already registered"); return;
       }
 
-      // Async Save
+      
       await addUser({
         fullName: form.fullName, email: form.email, contact: form.contact,
         gender: form.gender, password: form.password

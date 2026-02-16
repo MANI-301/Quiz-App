@@ -2,7 +2,6 @@ import axios from "axios";
 
 const API_URL = "http://localhost:3001";
 
-// Users
 export const getUsers = async () => {
   const res = await axios.get(`${API_URL}/users`);
   return res.data;
@@ -19,7 +18,6 @@ export const loginUser = async (email, password) => {
   return res.data.length > 0 ? res.data[0] : null;
 };
 
-// Exams
 export const getExams = async () => {
   const res = await axios.get(`${API_URL}/exams`);
   return res.data;
@@ -37,14 +35,14 @@ export const updateExam = async (id, data) => {
 
 export const deleteExam = async (id) => {
   await axios.delete(`${API_URL}/exams/${id}`);
-  // Manual cascade delete for questions
+  
   const questions = await getQuestionsByExam(id);
   for (const q of questions) {
     await deleteQuestion(q.id);
   }
 };
 
-// Questions
+
 export const getQuestions = async () => {
   const res = await axios.get(`${API_URL}/questions`);
   return res.data;
@@ -75,7 +73,7 @@ export const deleteQuestion = async (id) => {
   await axios.delete(`${API_URL}/questions/${id}`);
 };
 
-// Vouchers
+
 export const getVouchers = async () => {
   const res = await axios.get(`${API_URL}/vouchers`);
   return res.data;

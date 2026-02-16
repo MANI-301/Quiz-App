@@ -35,15 +35,6 @@
       "gender": "Male",
       "password": "Tiru@123",
       "role": "student"
-    },
-    {
-      "fullName": "Mani",
-      "email": "mani@gmail.com",
-      "contact": "9361432677",
-      "gender": "Male",
-      "password": "Mani@1",
-      "role": "student",
-      "id": "cxk95H2"
     }
   ],
   "exams": [
@@ -66,10 +57,6 @@
     {
       "id": "5",
       "name": "Oracle SQL"
-    },
-    {
-      "id": "334d",
-      "name": "a"
     }
   ],
   "vouchers": [
@@ -950,306 +937,6 @@
       "date": "2026-02-13T10:27:01.542Z"
     },
     {
-      "id": "e49d",
-      "studentName": "Kotipatruni Tirumala Rao",
-      "studentEmail": "tirumalarao@gmail.com",
-      "examId": "3",
-      "examName": "JavaScript",
-      "totalMarks": 5,
-      "obtainedMarks": 3,
-      "score": 3,
-      "totalQuestions": 5,
-      "status": "Pass",
-      "details": [
-        {
-          "questionId": "43",
-          "question": "What does NaN stand for?",
-          "correctOption": "B",
-          "correctAnswer": "Not a Number",
-          "userOption": "B",
-          "userAnswer": "Not a Number",
-          "isCorrect": true
-        },
-        {
-          "questionId": "31",
-          "question": "Which company developed JavaScript?",
-          "correctOption": "B",
-          "correctAnswer": "Netscape",
-          "userOption": "B",
-          "userAnswer": "Netscape",
-          "isCorrect": true
-        },
-        {
-          "questionId": "36",
-          "question": "Which method converts JSON to a JavaScript object?",
-          "correctOption": "B",
-          "correctAnswer": "JSON.parse()",
-          "userOption": "D",
-          "userAnswer": "JSON.toObject()",
-          "isCorrect": false
-        },
-        {
-          "questionId": "42",
-          "question": "Which event fires when a page is fully loaded?",
-          "correctOption": "C",
-          "correctAnswer": "onload",
-          "userOption": "C",
-          "userAnswer": "onload",
-          "isCorrect": true
-        },
-        {
-          "questionId": "39",
-          "question": "What does === operator check?",
-          "correctOption": "C",
-          "correctAnswer": "Value and type",
-          "userOption": "B",
-          "userAnswer": "Type only",
-          "isCorrect": false
-        }
-      ],
-      "date": "2026-02-13T10:29:13.966Z"
-    },
-    {
-      "id": "15a5",
-      "studentName": "Kotipatruni Tirumala Rao",
-      "studentEmail": "tirumalarao@gmail.com",
-      "examId": "4",
-      "examName": "React",
-      "totalMarks": 5,
-      "obtainedMarks": 1,
-      "score": 1,
-      "totalQuestions": 5,
-      "status": "Fail",
-      "details": [
-        {
-          "questionId": "52",
-          "question": "Props in React are read-only.",
-          "correctOption": "A",
-          "correctAnswer": "True",
-          "userOption": "A",
-          "userAnswer": "True",
-          "isCorrect": true
-        },
-        {
-          "questionId": "58",
-          "question": "What is React Router used for?",
-          "correctOption": "B",
-          "correctAnswer": "Navigation between pages",
-          "userOption": "C",
-          "userAnswer": "API calls",
-          "isCorrect": false
-        },
-        {
-          "questionId": "46",
-          "question": "What is React primarily used for?",
-          "correctOption": "B",
-          "correctAnswer": "Building user interfaces",
-          "userOption": "D",
-          "userAnswer": "Networking",
-          "isCorrect": false
-        },
-        {
-          "questionId": "57",
-          "question": "Which method is used to update state?",
-          "correctOption": "B",
-          "correctAnswer": "setState()",
-          "userOption": "D",
-          "userAnswer": "modifyState()",
-          "isCorrect": false
-        },
-        {
-          "questionId": "60",
-          "question": "Which lifecycle method runs after component mounts?",
-          "correctOption": "B",
-          "correctAnswer": "componentDidMount",
-          "userOption": "C",
-          "userAnswer": "componentWillUpdate",
-          "isCorrect": false
-        }
-      ],
-      "date": "2026-02-13T10:29:48.086Z"
-    },
-    {
-      "id": "004b",
-      "studentName": "Kotipatruni Tirumala Rao",
-      "studentEmail": "tirumalarao@gmail.com",
-      "examId": "2",
-      "examName": "Python",
-      "totalMarks": 5,
-      "obtainedMarks": 5,
-      "score": 5,
-      "totalQuestions": 5,
-      "status": "Pass",
-      "details": [
-        {
-          "questionId": "30",
-          "question": "Which keyword creates a class in Python?",
-          "correctOption": "C",
-          "correctAnswer": "class",
-          "userOption": "C",
-          "userAnswer": "class",
-          "isCorrect": true
-        },
-        {
-          "questionId": "19",
-          "question": "What is the correct file extension for Python files?",
-          "correctOption": "C",
-          "correctAnswer": ".py",
-          "userOption": "C",
-          "userAnswer": ".py",
-          "isCorrect": true
-        },
-        {
-          "questionId": "25",
-          "question": "How do you insert a comment in Python?",
-          "correctOption": "C",
-          "correctAnswer": "# comment",
-          "userOption": "C",
-          "userAnswer": "# comment",
-          "isCorrect": true
-        },
-        {
-          "questionId": "18",
-          "question": "Python is an interpreted language.",
-          "correctOption": "A",
-          "correctAnswer": "True",
-          "userOption": "A",
-          "userAnswer": "True",
-          "isCorrect": true
-        },
-        {
-          "questionId": "24",
-          "question": "Which loop is used when number of iterations is unknown?",
-          "correctOption": "B",
-          "correctAnswer": "while",
-          "userOption": "B",
-          "userAnswer": "while",
-          "isCorrect": true
-        }
-      ],
-      "date": "2026-02-13T10:56:50.235Z"
-    },
-    {
-      "id": "b12e",
-      "studentName": "Kotipatruni Tirumala Rao",
-      "studentEmail": "tirumalarao@gmail.com",
-      "examId": "2",
-      "examName": "Python",
-      "totalMarks": 5,
-      "obtainedMarks": 0,
-      "score": 0,
-      "totalQuestions": 5,
-      "status": "Fail",
-      "details": [
-        {
-          "questionId": "26",
-          "question": "Which keyword is used to handle exceptions in Python?",
-          "correctOption": "B",
-          "correctAnswer": "except",
-          "userOption": "D",
-          "userAnswer": "error",
-          "isCorrect": false
-        },
-        {
-          "questionId": "27",
-          "question": "What does the range() function return?",
-          "correctOption": "C",
-          "correctAnswer": "An iterator",
-          "userOption": "D",
-          "userAnswer": "A string",
-          "isCorrect": false
-        },
-        {
-          "questionId": "30",
-          "question": "Which keyword creates a class in Python?",
-          "correctOption": "C",
-          "correctAnswer": "class",
-          "userOption": "B",
-          "userAnswer": "object",
-          "isCorrect": false
-        },
-        {
-          "questionId": "24",
-          "question": "Which loop is used when number of iterations is unknown?",
-          "correctOption": "B",
-          "correctAnswer": "while",
-          "userOption": "D",
-          "userAnswer": "foreach",
-          "isCorrect": false
-        },
-        {
-          "questionId": "25",
-          "question": "How do you insert a comment in Python?",
-          "correctOption": "C",
-          "correctAnswer": "# comment",
-          "userOption": "A",
-          "userAnswer": "// comment",
-          "isCorrect": false
-        }
-      ],
-      "date": "2026-02-13T11:25:49.593Z"
-    },
-    {
-      "id": "80a1",
-      "studentName": "Kotipatruni Tirumala Rao",
-      "studentEmail": "tirumalarao@gmail.com",
-      "examId": "2",
-      "examName": "Python",
-      "totalMarks": 5,
-      "obtainedMarks": 5,
-      "score": 5,
-      "totalQuestions": 5,
-      "status": "Pass",
-      "details": [
-        {
-          "questionId": "20",
-          "question": "Which of these is a mutable data type?",
-          "correctOption": "C",
-          "correctAnswer": "list",
-          "userOption": "C",
-          "userAnswer": "list",
-          "isCorrect": true
-        },
-        {
-          "questionId": "21",
-          "question": "What does len() function do?",
-          "correctOption": "A",
-          "correctAnswer": "Returns length",
-          "userOption": "A",
-          "userAnswer": "Returns length",
-          "isCorrect": true
-        },
-        {
-          "questionId": "30",
-          "question": "Which keyword creates a class in Python?",
-          "correctOption": "C",
-          "correctAnswer": "class",
-          "userOption": "C",
-          "userAnswer": "class",
-          "isCorrect": true
-        },
-        {
-          "questionId": "27",
-          "question": "What does the range() function return?",
-          "correctOption": "C",
-          "correctAnswer": "An iterator",
-          "userOption": "C",
-          "userAnswer": "An iterator",
-          "isCorrect": true
-        },
-        {
-          "questionId": "26",
-          "question": "Which keyword is used to handle exceptions in Python?",
-          "correctOption": "B",
-          "correctAnswer": "except",
-          "userOption": "B",
-          "userAnswer": "except",
-          "isCorrect": true
-        }
-      ],
-      "date": "2026-02-13T11:40:26.443Z"
-    },
-    {
       "id": "d4ce",
       "studentName": "Kotipatruni Tirumala Rao",
       "studentEmail": "tirumalarao@gmail.com",
@@ -1788,6 +1475,66 @@
       ],
       "date": "2026-02-15T17:48:22.289Z",
       "id": "BQKfhj0"
+    },
+    {
+      "studentName": "John Doe",
+      "studentEmail": "john@student.com",
+      "examId": "1",
+      "examName": "Java",
+      "totalMarks": 5,
+      "obtainedMarks": 0,
+      "score": 0,
+      "totalQuestions": 5,
+      "status": "Fail",
+      "details": [
+        {
+          "questionId": "4",
+          "question": "Java is a platform-independent language.",
+          "correctOption": "A",
+          "correctAnswer": "True",
+          "userOption": "B",
+          "userAnswer": "False",
+          "isCorrect": false
+        },
+        {
+          "questionId": "8",
+          "question": "What is the size of int in Java?",
+          "correctOption": "B",
+          "correctAnswer": "4 bytes",
+          "userOption": "C",
+          "userAnswer": "8 bytes",
+          "isCorrect": false
+        },
+        {
+          "questionId": "15",
+          "question": "What keyword prevents method overriding?",
+          "correctOption": "C",
+          "correctAnswer": "final",
+          "userOption": "D",
+          "userAnswer": "volatile",
+          "isCorrect": false
+        },
+        {
+          "questionId": "14",
+          "question": "Which collection stores key-value pairs?",
+          "correctOption": "B",
+          "correctAnswer": "HashMap",
+          "userOption": "C",
+          "userAnswer": "LinkedList",
+          "isCorrect": false
+        },
+        {
+          "questionId": "1",
+          "question": "Which keyword is used to create a class in Java?",
+          "correctOption": "A",
+          "correctAnswer": "class",
+          "userOption": "C",
+          "userAnswer": "struct",
+          "isCorrect": false
+        }
+      ],
+      "date": "2026-02-16T08:31:02.519Z",
+      "id": "utf6xSl"
     }
   ]
 }

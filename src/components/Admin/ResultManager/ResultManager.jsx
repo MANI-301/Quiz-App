@@ -17,7 +17,7 @@ var ResultManager = function () {
   var [deleteOpen, setDeleteOpen] = useState(false);
   var [deleteId, setDeleteId] = useState(null);
 
-  // Async load function
+ 
   var load = async function () { 
     const data = await getResults();
     setResults(data); 

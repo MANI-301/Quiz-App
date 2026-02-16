@@ -22,7 +22,7 @@ var VoucherPage = function () {
     setVoucherCode(code);
     setError("");
     
-    // Reset states if code is cleared
+    
     if (code.length < 4) {
       setVoucherValid(false);
       setExamId("");
@@ -37,22 +37,22 @@ var VoucherPage = function () {
         setVoucherValid(true);
         var allExams = await getExams();
         
-        // FIX: Use String() to ensure 1 matches "1"
+       
         var linkedExam = allExams.find(function (ex) { 
           return String(ex.id) === String(voucher.examId); 
         });
 
         if (linkedExam) {
-          // 1. Update the dropdown list to show this exam
+          
           setExams([linkedExam]);
-          // 2. Auto-select the ID immediately
+         
           setExamId(linkedExam.id);
         } else {
-          // Fallback if exam ID in voucher doesn't exist in exams table
+      
           setExams(allExams); 
         }
       } else {
-        // Only show error if length is substantial to avoid annoying UX
+     
         if (code.length > 5) setError("Invalid or inactive voucher code");
         setVoucherValid(false);
         setExamId("");

@@ -141,7 +141,7 @@ var DashboardHome = function () {
               Available Exams
             </Typography>
             {exams.map(function (exam) {
-              // FIX: Convert both to String to ensure strict type matching doesn't fail
+             
               var qCount = questions.filter(function (q) { 
                 return String(q.examId) === String(exam.id); 
               }).length;

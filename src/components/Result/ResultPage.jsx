@@ -18,7 +18,7 @@ var ResultPage = function () {
   var location = useLocation();
   var navigate = useNavigate();
   var [showPopup, setShowPopup] = useState(false);
-  var [showConfetti, setShowConfetti] = useState(false); // 1. New State for Confetti
+  var [showConfetti, setShowConfetti] = useState(false);
   var [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
   
   var cardRef = useRef(null);
@@ -35,17 +35,17 @@ var ResultPage = function () {
   useEffect(function () {
     if (result && result.status === "Pass") {
       setShowPopup(true);
-      setShowConfetti(true); // Start confetti
+      setShowConfetti(true); 
     }
   }, [result]);
 
-  // 2. Stop Confetti after 5 seconds
+
   useEffect(function() {
     var timer;
     if (showConfetti) {
       timer = setTimeout(function() {
         setShowConfetti(false);
-      }, 7000); // 5 Seconds
+      }, 7000); 
     }
     return function() { clearTimeout(timer); };
   }, [showConfetti]);
@@ -81,7 +81,7 @@ var ResultPage = function () {
 
   return (
     <div className="result-wrapper">
-      {/* 3. Use showConfetti state instead of just isPassed */}
+    
       {isPassed && showConfetti && (
         <Confetti
           width={windowSize.width}

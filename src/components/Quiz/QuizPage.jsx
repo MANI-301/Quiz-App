@@ -32,7 +32,7 @@ var QuizPage = function () {
 
   useEffect(function () {
     async function loadQuiz() {
-        var eid = examId; // Keep as string or convert if needed
+        var eid = examId; 
         var qs = await getRandomQuestions(eid, QUESTIONS_PER_QUIZ);
         setQuestions(qs);
         var exams = await getExams();

@@ -20,7 +20,6 @@ var VoucherManager = function () {
   var [editId, setEditId] = useState(null);
   var [form, setForm] = useState({ code: "", examId: "", active: true });
 
-  // Async data loading
   var load = async function () { 
     try {
       const v = await getVouchers();

@@ -36,10 +36,10 @@ var AdminDashboard = function () {
 
   var drawer = (
     <Box>
-      {/* 1. Standard Spacer to clear the AppBar */}
+     
       <Toolbar />
       
-      {/* 2. NEW GAP: This creates the vertical space between the Nav and Sidebar content */}
+      
       <Box sx={{ height:0}} /> 
 
       <div className="admin-sidebar-header">
@@ -93,26 +93,26 @@ var AdminDashboard = function () {
         </Toolbar>
       </AppBar>
       
-      {/* Mobile Drawer */}
+      
       <Drawer variant="temporary" open={mobileOpen} onClose={function () { setMobileOpen(false); }}
         sx={{ display: { xs: "block", md: "none" }, "& .MuiDrawer-paper": { width: drawerWidth, background: "#0d1f0d", color: "#e0e0e0" } }}>
         {drawer}
       </Drawer>
       
-      {/* Desktop Drawer */}
+    
       <Drawer variant="permanent"
         sx={{ 
           display: { xs: "none", md: "block" }, 
-          width: drawerWidth, // Ensures drawer takes up layout space
+          width: drawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": { width: drawerWidth, boxSizing: "border-box", background: "#0d1f0d", color: "#e0e0e0" } 
         }} open>
         {drawer}
       </Drawer>
       
-      {/* Main Content */}
+     
       <Box component="main" className="admin-content" sx={{ flexGrow: 1, p: 3, width: { md: `calc(100% - ${drawerWidth}px)` }, minHeight: "100vh" }}>
-        <Toolbar /> {/* Spacer for AppBar */}
+        <Toolbar /> 
         <Outlet />
       </Box>
     </Box>
