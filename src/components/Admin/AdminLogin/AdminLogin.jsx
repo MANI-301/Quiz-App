@@ -21,6 +21,8 @@ var AdminLogin = function () {
   var handleLogin = async function (e) {
     e.preventDefault();
     setError("");
+    if(!email) { setError("Email is required"); return; }
+    if(!password) { setError("Password is required"); return; }
     if (!email || !password) { setError("Please fill in all fields"); return; }
     
     try {

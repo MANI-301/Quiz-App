@@ -9,6 +9,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import "../../styles/register.css";
 
 var validatePassword = function (pwd) {
+  if(!pwd) return "Password is required";
   if (pwd.length < 6) return "Password must be at least 6 characters";
   if (!/[A-Z]/.test(pwd)) return "Password must contain an uppercase letter";
   if (!/[a-z]/.test(pwd)) return "Password must contain a lowercase letter";
@@ -18,7 +19,7 @@ var validatePassword = function (pwd) {
 };
 
 var validateContact = function (contact) {
-  if (contact && !/^\d{10}$/.test(contact)) return "Contact must be exactly 10 digits";
+  if (contact && !/^\d{10}$/.test(contact));
   return "";
 };
 
@@ -39,6 +40,10 @@ var StudentRegister = function () {
     setError("");
     setSuccess("");
     
+    if(!form.fullName) { setError("Full Name is required"); return; }
+    if(!form.email) { setError("Email is required"); return; }
+    if(!form.password) { setError("Password is required"); return; }
+    if(!form.confirmPassword) { setError("Confirm Password is required"); return; }
  
     if (!form.fullName || !form.email || !form.password || !form.confirmPassword) {
       setError("Please fill in all required fields"); return;
@@ -99,7 +104,7 @@ var StudentRegister = function () {
             <form onSubmit={handleSubmit}>
               <TextField fullWidth label="Full Name" name="fullName" value={form.fullName} onChange={handleChange} sx={{ mb: 2 }} required />
               <TextField fullWidth label="Email ID" name="email" type="email" value={form.email} onChange={handleChange} sx={{ mb: 2 }} required />
-              <TextField fullWidth label="Contact Number" name="contact" value={form.contact} onChange={handleChange} sx={{ mb: 2 }} inputProps={{ maxLength: 10 }} helperText="Enter 10-digit mobile number" FormHelperTextProps={{ style: { color: "#ffffff" }}}/>
+              <TextField fullWidth label="Contact Number" name="contact" value={form.contact} onChange={handleChange} sx={{ mb: 2 }} inputProps={{ maxLength: 10 }} />
 
               <FormControl sx={{ mb: 2 }}>
                 <FormLabel>Gender</FormLabel>
@@ -110,7 +115,7 @@ var StudentRegister = function () {
                 </RadioGroup>
               </FormControl>
               <TextField fullWidth label="Password" name="password" type="password" value={form.password} onChange={handleChange} sx={{ mb: 1 }} required
-                helperText="Min 6 chars: uppercase, lowercase, number, symbol" FormHelperTextProps={{ style: { color: "#ffffff" }}}/>
+                />
               <TextField fullWidth label="Confirm Password" name="confirmPassword" type="password" value={form.confirmPassword} onChange={handleChange} sx={{ mb: 3, mt: 1 }} required />
               <Box sx={{ display: "flex", gap: 2 }}>
                 <Button type="submit" variant="contained" fullWidth sx={{
