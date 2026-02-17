@@ -2,21 +2,13 @@ import { useState, useEffect } from "react";
 import {
   Box, Typography, Table, TableBody, TableCell, TableContainer, TableHead,
   TableRow, Paper, TextField, Chip, IconButton, Dialog, DialogTitle,
-<<<<<<< HEAD
   DialogContent, DialogActions, Button, InputAdornment 
-=======
-  DialogContent, DialogActions, Button
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
 } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import SearchIcon from "@mui/icons-material/Search";
-<<<<<<< HEAD
 import FileDownloadIcon from "@mui/icons-material/FileDownload"; // 1. Import Icon
 import * as XLSX from 'xlsx'; // 2. Import SheetJS
-=======
-import InputAdornment from "@mui/material/InputAdornment";
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
 import { getResults, deleteResult } from "../../../services/api.js";
 import "../../../styles/admin.css";
 
@@ -26,10 +18,6 @@ var ResultManager = function () {
   var [deleteOpen, setDeleteOpen] = useState(false);
   var [deleteId, setDeleteId] = useState(null);
 
-<<<<<<< HEAD
-=======
- 
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
   var load = async function () { 
     const data = await getResults();
     setResults(data); 
@@ -42,7 +30,6 @@ var ResultManager = function () {
       r.examName.toLowerCase().includes(filter.toLowerCase());
   });
 
-<<<<<<< HEAD
   // 3. Add Export Functionality
   var handleExport = function () {
     if (filtered.length === 0) {
@@ -71,8 +58,6 @@ var ResultManager = function () {
     XLSX.writeFile(wb, "Student_Results.xlsx");
   };
 
-=======
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
   var confirmDelete = function (id) { setDeleteId(id); setDeleteOpen(true); };
   
   var handleDelete = async function () {
@@ -85,7 +70,6 @@ var ResultManager = function () {
   return (
     <Box>
       <Typography variant="h5" className="management-title" sx={{ mb: 3 }}>Result Management</Typography>
-<<<<<<< HEAD
       
       {/* Search and Export Section */}
       <Box sx={{ display: "flex", gap: 2, mb: 3, flexWrap: "wrap", alignItems: "stretch" }}>
@@ -119,13 +103,6 @@ var ResultManager = function () {
         </Button>
       </Box>
 
-=======
-      <TextField label="Search by Student or Exam Name" value={filter}
-        onChange={function (e) { setFilter(e.target.value); }}
-        sx={{ mb: 3, minWidth: 350, "& .MuiOutlinedInput-root": { color: "#e0e0e0" }, "& .MuiInputLabel-root": { color: "#8fbc8f" }, "& .MuiOutlinedInput-notchedOutline": { borderColor: "rgba(46,204,113,0.3)" } }}
-        InputProps={{ startAdornment: <InputAdornment position="start"><SearchIcon sx={{ color: "#2ecc71" }} /></InputAdornment> }}
-      />
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       <TableContainer component={Paper} sx={{ borderRadius: 3, boxShadow: "0 2px 12px rgba(0,0,0,0.3)", background: "#112211" }}>
         <Table>
           <TableHead className="admin-table-header">

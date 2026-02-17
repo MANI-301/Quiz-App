@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useRef } from "react";
 // 1. IMPORT useLocation
 import { useLocation } from "react-router-dom"; 
@@ -6,30 +5,19 @@ import {
   Box, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead,
   TableRow, Paper, Dialog, DialogTitle, DialogContent, DialogActions, TextField,
   IconButton, Select, MenuItem, FormControl, InputLabel, Alert, CircularProgress
-=======
-import { useState, useEffect } from "react";
-import {
-  Box, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead,
-  TableRow, Paper, Dialog, DialogTitle, DialogContent, DialogActions, TextField,
-  IconButton, Select, MenuItem, FormControl, InputLabel
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
 } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
-<<<<<<< HEAD
 import FileUploadIcon from "@mui/icons-material/FileUpload";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import * as XLSX from 'xlsx'; 
-=======
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
 import {
   getExams, getQuestionsByExam, addQuestion, updateQuestion, deleteQuestion
 } from "../../../services/api.js";
 import "../../../styles/admin.css";
 
-<<<<<<< HEAD
 // Helper function to create a delay
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -42,18 +30,12 @@ var QuestionManager = function () {
   // 3. SET INITIAL ID FROM DASHBOARD (if exists), otherwise empty
   var [selectedExamId, setSelectedExamId] = useState(location.state?.selectedExamId || "");
   
-=======
-var QuestionManager = function () {
-  var [exams, setExams] = useState([]);
-  var [selectedExamId, setSelectedExamId] = useState("");
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
   var [questions, setQuestions] = useState([]);
   var [open, setOpen] = useState(false);
   var [deleteOpen, setDeleteOpen] = useState(false);
   var [deleteId, setDeleteId] = useState(null);
   var [editId, setEditId] = useState(null);
   var [form, setForm] = useState({ question: "", optionA: "", optionB: "", optionC: "", optionD: "", correctOption: "A" });
-<<<<<<< HEAD
   var [importError, setImportError] = useState("");
   var [loading, setLoading] = useState(false);
   var [progress, setProgress] = useState(0); 
@@ -68,13 +50,6 @@ var QuestionManager = function () {
       } catch (e) {
         console.error("Server seems down");
       }
-=======
-
-  useEffect(function () { 
-    async function loadExams() {
-      const data = await getExams();
-      setExams(data);
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
     }
     loadExams();
   }, []);
@@ -106,7 +81,6 @@ var QuestionManager = function () {
 
   var handleSave = async function () {
     if (!form.question || !selectedExamId) return;
-<<<<<<< HEAD
     try {
       if (editId) await updateQuestion(editId, form);
       else await addQuestion(Object.assign({}, form, { examId: selectedExamId }));
@@ -115,12 +89,6 @@ var QuestionManager = function () {
     } catch (err) {
       alert("Failed to save. Is the server running?");
     }
-=======
-    if (editId) await updateQuestion(editId, form);
-    else await addQuestion(Object.assign({}, form, { examId: selectedExamId }));
-    setOpen(false); 
-    reload();
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
   };
 
   var confirmDelete = function (id) { setDeleteId(id); setDeleteOpen(true); };
@@ -132,7 +100,6 @@ var QuestionManager = function () {
     reload(); 
   };
 
-<<<<<<< HEAD
   var handleExport = function () {
     if (questions.length === 0) {
       alert("No questions to export!");
@@ -247,8 +214,6 @@ var QuestionManager = function () {
     e.target.value = "";
   };
 
-=======
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
   var selectedExam = exams.find(function (e) { return e.id === selectedExamId; });
   var dialogSx = { "& .MuiOutlinedInput-root": { color: "#e0e0e0" }, "& .MuiInputLabel-root": { color: "#8fbc8f" }, "& .MuiOutlinedInput-notchedOutline": { borderColor: "rgba(46,204,113,0.3)" } };
 
@@ -266,7 +231,6 @@ var QuestionManager = function () {
         </Select>
       </FormControl>
 
-<<<<<<< HEAD
       {importError && <Alert severity="error" sx={{ mb: 2 }}>{importError}</Alert>}
       
       {loading && (
@@ -303,15 +267,6 @@ var QuestionManager = function () {
 
           </Box>
 
-=======
-      {selectedExam && (
-        <Box>
-          <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-            <Typography variant="h6" sx={{ color: "#2ecc71", fontWeight: 600 }}>Questions for: {selectedExam.name}</Typography>
-            <Button variant="contained" startIcon={<AddCircleIcon />} onClick={function () { handleOpen(); }}
-              sx={{ background: "linear-gradient(135deg, #1a6b3c, #2ecc71)" }}>Add Question</Button>
-          </Box>
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
           <TableContainer component={Paper} sx={{ borderRadius: 3, boxShadow: "0 2px 12px rgba(0,0,0,0.3)", background: "#112211" }}>
             <Table>
               <TableHead className="admin-table-header">
@@ -341,11 +296,7 @@ var QuestionManager = function () {
           </TableContainer>
         </Box>
       )}
-<<<<<<< HEAD
       
-=======
-
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       <Dialog open={open} onClose={function () { setOpen(false); }} maxWidth="md" fullWidth PaperProps={{ sx: { borderRadius: 3, background: "#112211", color: "#e0e0e0" } }}>
         <DialogTitle sx={{ fontWeight: 700, color: "#2ecc71" }}>{editId ? "Edit Question" : "Add Question"}</DialogTitle>
         <DialogContent sx={{ pt: "16px !important" }}>
@@ -373,10 +324,6 @@ var QuestionManager = function () {
           <Button variant="contained" onClick={handleSave} sx={{ background: "#2ecc71" }}>Save</Button>
         </DialogActions>
       </Dialog>
-<<<<<<< HEAD
-=======
-
->>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       <Dialog open={deleteOpen} onClose={function () { setDeleteOpen(false); }} PaperProps={{ sx: { borderRadius: 3, background: "#112211", color: "#e0e0e0" } }}>
         <DialogTitle sx={{ display: "flex", alignItems: "center", gap: 1, color: "#f39c12" }}>
           <WarningAmberIcon sx={{ color: "#f39c12" }} /> Confirm Delete
