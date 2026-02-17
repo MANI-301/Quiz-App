@@ -1,0 +1,73 @@
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+;
+
+.login-card {
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: #112211;
+  border: 1px solid rgba(46, 204, 113, 0.15);
+}
+
+.login-header {
+  background: linear-gradient(135deg, #1a6b3c, #2ecc71);
+  padding: 28px;
+  text-align: center;
+}
+
+.login-header h4 {
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.login-header p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 4px 0 0;
+}
+
+.login-body {
+  padding: 32px;
+  background: #112211;
+}
+
+.login-body .MuiTextField-root .MuiOutlinedInput-root {
+  color: #e0e0e0;
+}
+
+.login-body .MuiTextField-root .MuiInputLabel-root {
+  color: #8fbc8f;
+}
+
+.login-body .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(46, 204, 113, 0.3);
+}
+
+.login-body .MuiTextField-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #2ecc71;
+}
+
+.admin-login-header {
+  background: linear-gradient(#ff5e00);
+  padding: 28px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.admin-login-header h4 {
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.admin-login-header p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 4px 0 0;
+}

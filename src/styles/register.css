@@ -1,0 +1,61 @@
+.register-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #0a1a0a 0%, #0d2818 40%, #1a4a2e 70%, #0d2818 100%);
+}
+
+.register-card {
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: #112211;
+  border: 1px solid rgba(46, 204, 113, 0.15);
+}
+
+.register-header {
+  background: linear-gradient(135deg, #1a6b3c, #2ecc71);
+  padding: 28px;
+  text-align: center;
+}
+
+.register-header h4 {
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.register-header p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 4px 0 0;
+}
+
+.register-body {
+  padding: 32px;
+  background: #112211;
+}
+
+
+.register-body .MuiTextField-root .MuiOutlinedInput-root {
+  color: #e0e0e0;
+}
+
+.register-body .MuiTextField-root .MuiInputLabel-root {
+  color: #8fbc8f;
+}
+
+.register-body .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(46, 204, 113, 0.3);
+}
+
+.register-body .MuiFormLabel-root {
+  color: #8fbc8f;
+}
+
+.password-hint {
+  font-size: 0.75rem;
+  color: #6b8f6b;
+  margin-top: 4px;
+}
