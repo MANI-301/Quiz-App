@@ -1,33 +1,27 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
-var ProtectedRoute = function ({ allowedRoles }) {
-  var location = useLocation(); // 1. Get the current URL the user is trying to access
-  var currentUser = JSON.parse(sessionStorage.getItem("currentUser") || "null");
+const ProtectedRoute = ({ allowedRoles }) => {
+  const location = useLocation();
 
-  // 2. Check if user is NOT logged in
+  // Get current user from sessionStorage
+  const currentUser = JSON.parse(sessionStorage.getItem("currentUser") || "null");
+
+  // 1️⃣ If no user is logged in → redirect to login page
   if (!currentUser) {
-    // Redirect to Login, but save the intended location in 'state'
-    // so we can redirect them back after they login.
-    return <Navigate to="/" state={{ from: location }} replace />;
+    const loginPath = allowedRoles?.includes("admin") ? "/admin/login" : "/";
+    return <Navigate to={loginPath} state={{ from: location }} replace />;
   }
 
-  // 3. Check if user exists but has the WRONG role
+  // 2️⃣ If logged in but user role is not allowed → redirect to their default page
   if (!allowedRoles.includes(currentUser.role)) {
-    // If a Student tries to access Admin pages
-    if (currentUser.role === "student") {
-      return <Navigate to="/voucher" replace />;
-    }
-    
-    // If an Admin tries to access Student pages
-    if (currentUser.role === "admin") {
-      return <Navigate to="/admin/dashboard" replace />;
-    }
+    if (currentUser.role === "student") return <Navigate to="/voucher" replace />;
+    if (currentUser.role === "admin") return <Navigate to="/admin/dashboard" replace />;
 
     // Fallback
     return <Navigate to="/" replace />;
   }
 
-  // 4. Authorized
+  // 3️⃣ Authorized → render child routes
   return <Outlet />;
 };
 

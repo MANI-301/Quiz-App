@@ -62,6 +62,15 @@
       "password": "Mani@123",
       "role": "student",
       "id": "8nhlJX3"
+    },
+    {
+      "fullName": "mani",
+      "email": "massmani@gmail.com",
+      "contact": "9059339403",
+      "gender": "Male",
+      "password": "Massmani@1",
+      "role": "student",
+      "id": "Duo1iKL"
     }
   ],
   "exams": [
@@ -1840,6 +1849,186 @@
       ],
       "date": "2026-02-16T10:38:57.953Z",
       "id": "IkutRc1"
+    },
+    {
+      "studentName": "mani",
+      "studentEmail": "massmani@gmail.com",
+      "examId": "1",
+      "examName": "Java",
+      "totalMarks": 5,
+      "obtainedMarks": 5,
+      "score": 5,
+      "totalQuestions": 5,
+      "status": "Pass",
+      "details": [
+        {
+          "questionId": "7",
+          "question": "Which package is imported by default in Java?",
+          "correctOption": "C",
+          "correctAnswer": "java.lang",
+          "userOption": "C",
+          "userAnswer": "java.lang",
+          "isCorrect": true
+        },
+        {
+          "questionId": "10",
+          "question": "Which of these is a wrapper class?",
+          "correctOption": "B",
+          "correctAnswer": "Integer",
+          "userOption": "B",
+          "userAnswer": "Integer",
+          "isCorrect": true
+        },
+        {
+          "questionId": "9",
+          "question": "Which keyword is used for inheritance in Java?",
+          "correctOption": "C",
+          "correctAnswer": "extends",
+          "userOption": "C",
+          "userAnswer": "extends",
+          "isCorrect": true
+        },
+        {
+          "questionId": "8",
+          "question": "What is the size of int in Java?",
+          "correctOption": "B",
+          "correctAnswer": "4 bytes",
+          "userOption": "B",
+          "userAnswer": "4 bytes",
+          "isCorrect": true
+        },
+        {
+          "questionId": "1",
+          "question": "Which keyword is used to create a class in Java?",
+          "correctOption": "A",
+          "correctAnswer": "class",
+          "userOption": "A",
+          "userAnswer": "class",
+          "isCorrect": true
+        }
+      ],
+      "date": "2026-02-17T16:45:12.876Z",
+      "id": "lqmCh90"
+    },
+    {
+      "studentName": "mani",
+      "studentEmail": "massmani@gmail.com",
+      "examId": "1",
+      "examName": "Java",
+      "totalMarks": 5,
+      "obtainedMarks": 5,
+      "score": 5,
+      "totalQuestions": 5,
+      "status": "Pass",
+      "details": [
+        {
+          "questionId": "4",
+          "question": "Java is a platform-independent language.",
+          "correctOption": "A",
+          "correctAnswer": "True",
+          "userOption": "A",
+          "userAnswer": "True",
+          "isCorrect": true
+        },
+        {
+          "questionId": "13",
+          "question": "Which access modifier makes a member accessible only within its class?",
+          "correctOption": "C",
+          "correctAnswer": "private",
+          "userOption": "C",
+          "userAnswer": "private",
+          "isCorrect": true
+        },
+        {
+          "questionId": "6",
+          "question": "What does JVM stand for?",
+          "correctOption": "A",
+          "correctAnswer": "Java Virtual Machine",
+          "userOption": "A",
+          "userAnswer": "Java Virtual Machine",
+          "isCorrect": true
+        },
+        {
+          "questionId": "15",
+          "question": "What keyword prevents method overriding?",
+          "correctOption": "C",
+          "correctAnswer": "final",
+          "userOption": "C",
+          "userAnswer": "final",
+          "isCorrect": true
+        },
+        {
+          "questionId": "7",
+          "question": "Which package is imported by default in Java?",
+          "correctOption": "C",
+          "correctAnswer": "java.lang",
+          "userOption": "C",
+          "userAnswer": "java.lang",
+          "isCorrect": true
+        }
+      ],
+      "date": "2026-02-17T17:05:39.868Z",
+      "id": "H26m4Ym"
+    },
+    {
+      "studentName": "Mani",
+      "studentEmail": "mani1@gmail.com",
+      "examId": "2",
+      "examName": "Python",
+      "totalMarks": 5,
+      "obtainedMarks": 5,
+      "score": 5,
+      "totalQuestions": 5,
+      "status": "Pass",
+      "details": [
+        {
+          "questionId": "19",
+          "question": "What is the correct file extension for Python files?",
+          "correctOption": "C",
+          "correctAnswer": ".py",
+          "userOption": "C",
+          "userAnswer": ".py",
+          "isCorrect": true
+        },
+        {
+          "questionId": "22",
+          "question": "Which operator is used for exponentiation?",
+          "correctOption": "B",
+          "correctAnswer": "**",
+          "userOption": "B",
+          "userAnswer": "**",
+          "isCorrect": true
+        },
+        {
+          "questionId": "16",
+          "question": "What is the output of print(type(5)) in Python?",
+          "correctOption": "B",
+          "correctAnswer": "<class 'int'>",
+          "userOption": "B",
+          "userAnswer": "<class 'int'>",
+          "isCorrect": true
+        },
+        {
+          "questionId": "20",
+          "question": "Which of these is a mutable data type?",
+          "correctOption": "C",
+          "correctAnswer": "list",
+          "userOption": "C",
+          "userAnswer": "list",
+          "isCorrect": true
+        },
+        {
+          "questionId": "30",
+          "question": "Which keyword creates a class in Python?",
+          "correctOption": "C",
+          "correctAnswer": "class",
+          "userOption": "C",
+          "userAnswer": "class",
+          "isCorrect": true
+        }
+      ],
+      "date": "2026-02-17T17:23:33.222Z",
+      "id": "U3Q5RvU"
     }
   ]
 }
