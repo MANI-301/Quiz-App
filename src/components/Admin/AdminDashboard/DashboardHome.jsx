@@ -60,11 +60,14 @@ var DashboardHome = function () {
     { label: "Failed", value: failCount, icon: <BarChartIcon sx={{ fontSize: 28, color: "#fff" }} />, bg: "linear-gradient(135deg, #e67e22, #f39c12)" },
   ];
 
+<<<<<<< HEAD
 
   var handleExamClick = function(examId) {
     navigate("/admin/questions", { state: { selectedExamId: examId } });
   };
 
+=======
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
   return (
     <Box>
       <div className="dashboard-welcome">
@@ -72,8 +75,15 @@ var DashboardHome = function () {
         <Typography variant="body1">Manage exams, questions, vouchers and view student results from here.</Typography>
         <div className="admin-quick-actions" style={{ marginTop: 16 }}>
           <button className="quick-action-btn" onClick={() => navigate("/admin/exams")} style={{ color: "white" }}>
+<<<<<<< HEAD
             <MenuBookIcon sx={{ fontSize: 18, color: "white" }} /> Manage Exams
           </button>
+=======
+  <MenuBookIcon sx={{ fontSize: 18, color: "white" }} />
+  Manage Exams
+</button>
+
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
           <button className="quick-action-btn" onClick={function () { navigate("/admin/questions"); }} style={{ color: "white" }}>
             <QuizIcon sx={{ fontSize: 18 }} /> Manage Questions
           </button>
@@ -144,11 +154,16 @@ var DashboardHome = function () {
               Available Exams
             </Typography>
             {exams.map(function (exam) {
+<<<<<<< HEAD
+=======
+             
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
               var qCount = questions.filter(function (q) { 
                 return String(q.examId) === String(exam.id); 
               }).length;
               
               return (
+<<<<<<< HEAD
                 <Box 
                   key={exam.id} 
                   onClick={function() { handleExamClick(exam.id); }}
@@ -163,6 +178,9 @@ var DashboardHome = function () {
                     "&:hover": { background: "rgba(46,204,113,0.08)", paddingLeft: 1 }
                   }}
                 >
+=======
+                <Box key={exam.id} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", py: 1, borderBottom: "1px solid rgba(46,204,113,0.1)" }}>
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                     <SchoolIcon sx={{ fontSize: 18, color: "#2ecc71" }} />
                     <Typography variant="body2" sx={{ fontWeight: 600, color: "#e0e0e0" }}>{exam.name}</Typography>

@@ -2,8 +2,12 @@ import { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import {
   Box, Drawer, List, ListItemButton, ListItemIcon, ListItemText,
+<<<<<<< HEAD
   AppBar, Toolbar, Typography, IconButton, Divider, Avatar,
   Dialog, DialogTitle, DialogContent, DialogActions, Button
+=======
+  AppBar, Toolbar, Typography, IconButton, Divider, Avatar
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
@@ -13,14 +17,20 @@ import AssessmentIcon from "@mui/icons-material/Assessment";
 import LogoutIcon from "@mui/icons-material/Logout";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import SchoolIcon from "@mui/icons-material/School";
+<<<<<<< HEAD
 import WarningAmberIcon from "@mui/icons-material/WarningAmber"; 
+=======
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
 import "../../../styles/admin.css";
 
 var drawerWidth = 280;
 
 var AdminDashboard = function () {
   var [mobileOpen, setMobileOpen] = useState(false);
+<<<<<<< HEAD
   var [logoutOpen, setLogoutOpen] = useState(false); 
+=======
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
   var navigate = useNavigate();
   var currentUser = JSON.parse(sessionStorage.getItem("currentUser") || "{}");
 
@@ -32,6 +42,7 @@ var AdminDashboard = function () {
     { text: "Results", icon: <AssessmentIcon />, path: "/admin/results" },
   ];
 
+<<<<<<< HEAD
 
   var handleLogoutClick = function () {
     setLogoutOpen(true);
@@ -40,13 +51,25 @@ var AdminDashboard = function () {
   var confirmLogout = function () {
     sessionStorage.removeItem("currentUser");
     setLogoutOpen(false);
+=======
+  var handleLogout = function () {
+    sessionStorage.removeItem("currentUser");
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
     navigate("/admin/login");
   };
 
   var drawer = (
     <Box>
+<<<<<<< HEAD
       <Toolbar />
       <Box sx={{ height: 0 }} /> 
+=======
+     
+      <Toolbar />
+      
+      
+      <Box sx={{ height:0}} /> 
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
 
       <div className="admin-sidebar-header">
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -74,8 +97,12 @@ var AdminDashboard = function () {
       </List>
       <Divider sx={{ borderColor: "rgba(46,204,113,0.15)" }} />
       <List sx={{ px: 1 }}>
+<<<<<<< HEAD
         
         <ListItemButton onClick={handleLogoutClick} sx={{ borderRadius: 2, "&:hover": { background: "rgba(231,76,60,0.1)" } }}>
+=======
+        <ListItemButton onClick={handleLogout} sx={{ borderRadius: 2, "&:hover": { background: "rgba(231,76,60,0.1)" } }}>
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
           <ListItemIcon sx={{ color: "#e74c3c", minWidth: 40 }}><LogoutIcon /></ListItemIcon>
           <ListItemText primary="Logout" primaryTypographyProps={{ fontSize: "0.9rem", fontWeight: 500, color: "#e74c3c" }} />
         </ListItemButton>
@@ -100,11 +127,19 @@ var AdminDashboard = function () {
         </Toolbar>
       </AppBar>
       
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       <Drawer variant="temporary" open={mobileOpen} onClose={function () { setMobileOpen(false); }}
         sx={{ display: { xs: "block", md: "none" }, "& .MuiDrawer-paper": { width: drawerWidth, background: "#0d1f0d", color: "#e0e0e0" } }}>
         {drawer}
       </Drawer>
       
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       <Drawer variant="permanent"
         sx={{ 
           display: { xs: "none", md: "block" }, 
@@ -115,10 +150,15 @@ var AdminDashboard = function () {
         {drawer}
       </Drawer>
       
+<<<<<<< HEAD
+=======
+     
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       <Box component="main" className="admin-content" sx={{ flexGrow: 1, p: 3, width: { md: `calc(100% - ${drawerWidth}px)` }, minHeight: "100vh" }}>
         <Toolbar /> 
         <Outlet />
       </Box>
+<<<<<<< HEAD
 
       <Dialog 
         open={logoutOpen} 
@@ -148,6 +188,8 @@ var AdminDashboard = function () {
           </Button>
         </DialogActions>
       </Dialog>
+=======
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
     </Box>
   );
 };

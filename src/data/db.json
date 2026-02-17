@@ -55,6 +55,7 @@
       "id": "VFMFvVP"
     },
     {
+<<<<<<< HEAD
       "fullName": "Ms dhoni",
       "email": "msd@gmail.com",
       "contact": "1234567890",
@@ -71,6 +72,15 @@
       "gender": "Male",
       "password": "Mani@1",
       "role": "student"
+=======
+      "fullName": "Manivannan",
+      "email": "mani123@gmail.com",
+      "contact": "1234567890",
+      "gender": "Male",
+      "password": "Mani@123",
+      "role": "student",
+      "id": "8nhlJX3"
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
     }
   ],
   "exams": [
@@ -102,6 +112,7 @@
   "vouchers": [
     {
       "id": "1",
+<<<<<<< HEAD
       "code": "JAVA2026",
       "examId": 1,
       "active": true
@@ -121,11 +132,33 @@
     {
       "id": "4",
       "code": "REACT2026",
+=======
+      "code": "JAVA2024",
+      "examId": 1,
+      "active": false
+    },
+    {
+      "id": "2",
+      "code": "PYTHON01",
+      "examId": 2,
+      "active": false
+    },
+    {
+      "id": "3",
+      "code": "JS2024",
+      "examId": 3,
+      "active": false
+    },
+    {
+      "id": "4",
+      "code": "REACT01",
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       "examId": 4,
       "active": true
     },
     {
       "id": "5",
+<<<<<<< HEAD
       "code": "SQL2026",
       "examId": 5,
       "active": true
@@ -133,6 +166,15 @@
     {
       "id": "6",
       "code": "DEMO",
+=======
+      "code": "SQL2024",
+      "examId": 5,
+      "active": false
+    },
+    {
+      "id": "6",
+      "code": "DEMO999",
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       "examId": 1,
       "active": false
     }
@@ -907,6 +949,7 @@
       "optionD": "a",
       "correctOption": "B",
       "examId": "1"
+<<<<<<< HEAD
     },
     {
       "examId": "7VeTPdy",
@@ -1067,10 +1110,315 @@
       "optionD": "a",
       "correctOption": "B",
       "id": "GAyq9pF"
+=======
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
     }
   ],
   "results": [
     {
+<<<<<<< HEAD
+=======
+      "id": "d4ce",
+      "studentName": "Kotipatruni Tirumala Rao",
+      "studentEmail": "tirumalarao@gmail.com",
+      "examId": "2",
+      "examName": "Python",
+      "totalMarks": 5,
+      "obtainedMarks": 0,
+      "score": 0,
+      "totalQuestions": 5,
+      "status": "Fail",
+      "details": [
+        {
+          "questionId": "24",
+          "question": "Which loop is used when number of iterations is unknown?",
+          "correctOption": "B",
+          "correctAnswer": "while",
+          "userOption": "D",
+          "userAnswer": "foreach",
+          "isCorrect": false
+        },
+        {
+          "questionId": "20",
+          "question": "Which of these is a mutable data type?",
+          "correctOption": "C",
+          "correctAnswer": "list",
+          "userOption": "D",
+          "userAnswer": "int",
+          "isCorrect": false
+        },
+        {
+          "questionId": "23",
+          "question": "What is the output of bool(0)?",
+          "correctOption": "B",
+          "correctAnswer": "False",
+          "userOption": "D",
+          "userAnswer": "None",
+          "isCorrect": false
+        },
+        {
+          "questionId": "30",
+          "question": "Which keyword creates a class in Python?",
+          "correctOption": "C",
+          "correctAnswer": "class",
+          "userOption": "D",
+          "userAnswer": "define",
+          "isCorrect": false
+        },
+        {
+          "questionId": "16",
+          "question": "What is the output of print(type(5)) in Python?",
+          "correctOption": "B",
+          "correctAnswer": "<class 'int'>",
+          "userOption": "D",
+          "userAnswer": "<class 'num'>",
+          "isCorrect": false
+        }
+      ],
+      "date": "2026-02-13T11:42:15.203Z"
+    },
+    {
+      "id": "8b76",
+      "studentName": "Kotipatruni Tirumala Rao",
+      "studentEmail": "tirumalarao@gmail.com",
+      "examId": "2",
+      "examName": "Python",
+      "totalMarks": 5,
+      "obtainedMarks": 5,
+      "score": 5,
+      "totalQuestions": 5,
+      "status": "Pass",
+      "details": [
+        {
+          "questionId": "30",
+          "question": "Which keyword creates a class in Python?",
+          "correctOption": "C",
+          "correctAnswer": "class",
+          "userOption": "C",
+          "userAnswer": "class",
+          "isCorrect": true
+        },
+        {
+          "questionId": "25",
+          "question": "How do you insert a comment in Python?",
+          "correctOption": "C",
+          "correctAnswer": "# comment",
+          "userOption": "C",
+          "userAnswer": "# comment",
+          "isCorrect": true
+        },
+        {
+          "questionId": "24",
+          "question": "Which loop is used when number of iterations is unknown?",
+          "correctOption": "B",
+          "correctAnswer": "while",
+          "userOption": "B",
+          "userAnswer": "while",
+          "isCorrect": true
+        },
+        {
+          "questionId": "27",
+          "question": "What does the range() function return?",
+          "correctOption": "C",
+          "correctAnswer": "An iterator",
+          "userOption": "C",
+          "userAnswer": "An iterator",
+          "isCorrect": true
+        },
+        {
+          "questionId": "23",
+          "question": "What is the output of bool(0)?",
+          "correctOption": "B",
+          "correctAnswer": "False",
+          "userOption": "B",
+          "userAnswer": "False",
+          "isCorrect": true
+        }
+      ],
+      "date": "2026-02-13T11:48:26.218Z"
+    },
+    {
+      "id": "c43c",
+      "studentName": "Kotipatruni Tirumala Rao",
+      "studentEmail": "tirumalarao@gmail.com",
+      "examId": "2",
+      "examName": "Python",
+      "totalMarks": 5,
+      "obtainedMarks": 5,
+      "score": 5,
+      "totalQuestions": 5,
+      "status": "Pass",
+      "details": [
+        {
+          "questionId": "22",
+          "question": "Which operator is used for exponentiation?",
+          "correctOption": "B",
+          "correctAnswer": "**",
+          "userOption": "B",
+          "userAnswer": "**",
+          "isCorrect": true
+        },
+        {
+          "questionId": "23",
+          "question": "What is the output of bool(0)?",
+          "correctOption": "B",
+          "correctAnswer": "False",
+          "userOption": "B",
+          "userAnswer": "False",
+          "isCorrect": true
+        },
+        {
+          "questionId": "26",
+          "question": "Which keyword is used to handle exceptions in Python?",
+          "correctOption": "B",
+          "correctAnswer": "except",
+          "userOption": "B",
+          "userAnswer": "except",
+          "isCorrect": true
+        },
+        {
+          "questionId": "28",
+          "question": "Which method adds an element at the end of a list?",
+          "correctOption": "B",
+          "correctAnswer": "append()",
+          "userOption": "B",
+          "userAnswer": "append()",
+          "isCorrect": true
+        },
+        {
+          "questionId": "24",
+          "question": "Which loop is used when number of iterations is unknown?",
+          "correctOption": "B",
+          "correctAnswer": "while",
+          "userOption": "B",
+          "userAnswer": "while",
+          "isCorrect": true
+        }
+      ],
+      "date": "2026-02-13T11:49:39.729Z"
+    },
+    {
+      "id": "f42d",
+      "studentName": "Kotipatruni Tirumala Rao",
+      "studentEmail": "tirumalarao@gmail.com",
+      "examId": "2",
+      "examName": "Python",
+      "totalMarks": 5,
+      "obtainedMarks": 0,
+      "score": 0,
+      "totalQuestions": 5,
+      "status": "Fail",
+      "details": [
+        {
+          "questionId": "22",
+          "question": "Which operator is used for exponentiation?",
+          "correctOption": "B",
+          "correctAnswer": "**",
+          "userOption": "",
+          "userAnswer": "Not Answered",
+          "isCorrect": false
+        },
+        {
+          "questionId": "29",
+          "question": "What is a dictionary in Python?",
+          "correctOption": "B",
+          "correctAnswer": "A key-value pair collection",
+          "userOption": "",
+          "userAnswer": "Not Answered",
+          "isCorrect": false
+        },
+        {
+          "questionId": "27",
+          "question": "What does the range() function return?",
+          "correctOption": "C",
+          "correctAnswer": "An iterator",
+          "userOption": "",
+          "userAnswer": "Not Answered",
+          "isCorrect": false
+        },
+        {
+          "questionId": "25",
+          "question": "How do you insert a comment in Python?",
+          "correctOption": "C",
+          "correctAnswer": "# comment",
+          "userOption": "",
+          "userAnswer": "Not Answered",
+          "isCorrect": false
+        },
+        {
+          "questionId": "19",
+          "question": "What is the correct file extension for Python files?",
+          "correctOption": "C",
+          "correctAnswer": ".py",
+          "userOption": "",
+          "userAnswer": "Not Answered",
+          "isCorrect": false
+        }
+      ],
+      "date": "2026-02-13T11:52:51.776Z"
+    },
+    {
+      "id": "8885",
+      "studentName": "Kotipatruni Tirumala Rao",
+      "studentEmail": "tirumalarao@gmail.com",
+      "examId": "2",
+      "examName": "Python",
+      "totalMarks": 5,
+      "obtainedMarks": 5,
+      "score": 5,
+      "totalQuestions": 5,
+      "status": "Pass",
+      "details": [
+        {
+          "questionId": "22",
+          "question": "Which operator is used for exponentiation?",
+          "correctOption": "B",
+          "correctAnswer": "**",
+          "userOption": "B",
+          "userAnswer": "**",
+          "isCorrect": true
+        },
+        {
+          "questionId": "21",
+          "question": "What does len() function do?",
+          "correctOption": "A",
+          "correctAnswer": "Returns length",
+          "userOption": "A",
+          "userAnswer": "Returns length",
+          "isCorrect": true
+        },
+        {
+          "questionId": "19",
+          "question": "What is the correct file extension for Python files?",
+          "correctOption": "C",
+          "correctAnswer": ".py",
+          "userOption": "C",
+          "userAnswer": ".py",
+          "isCorrect": true
+        },
+        {
+          "questionId": "23",
+          "question": "What is the output of bool(0)?",
+          "correctOption": "B",
+          "correctAnswer": "False",
+          "userOption": "B",
+          "userAnswer": "False",
+          "isCorrect": true
+        },
+        {
+          "questionId": "16",
+          "question": "What is the output of print(type(5)) in Python?",
+          "correctOption": "B",
+          "correctAnswer": "<class 'int'>",
+          "userOption": "B",
+          "userAnswer": "<class 'int'>",
+          "isCorrect": true
+        }
+      ],
+      "date": "2026-02-13T11:53:21.216Z"
+    },
+    {
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
       "studentName": "Mani",
       "studentEmail": "mani@gmail.com",
       "examId": "2",
@@ -1549,6 +1897,7 @@
       ],
       "date": "2026-02-16T10:38:57.953Z",
       "id": "IkutRc1"
+<<<<<<< HEAD
     },
     {
       "studentName": "Mani",
@@ -1729,6 +2078,8 @@
       ],
       "date": "2026-02-17T12:07:49.990Z",
       "id": "LEHMtAQ"
+=======
+>>>>>>> 07a4ea7c9b1cb80912ff59dcf91419b87dfc15b4
     }
   ]
 }
